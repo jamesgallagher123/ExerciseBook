@@ -1,5 +1,1 @@
-var stringArray: Array[String] = java.util.TimeZone.getAvailableIDs
-
-for (i <- 0 to stringArray.length - 1) {
-    println(stringArray(i))
-}
+java.util.TimeZone.getAvailableIDs.map(a => a.split("/")).filter(_.length>1).map(a => a(1)).grouped(10).map(a => a(0)).toArray
