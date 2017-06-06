@@ -1,6 +1,8 @@
-def sumOfIntegers (int1: Int, int2: Int, isTrue: Boolean): Int = isTrue match {
-    case true => int1 + int2
-    case false => int1 * int2
+def sumOfIntegers (int1: Int, int2: Int, isTrue: Boolean): Int = {
+    isTrue match {
+        case true => int1 + int2
+        case false => int1 * int2
+    }
 }
 
 sumOfIntegers(2, 5, true)
@@ -8,13 +10,11 @@ sumOfIntegers(2, 5, false)
 
 
 
-def returnNonZero (int1: Int, int2: Int): Int = {
-    if (int1 == 0 && int2 == 0) {
-        0
-    } else if (int1 == 0 && int2 != 0) {
-        int2
-    } else {
-        int1
+def returnNonZero (int1: Int, int2: Int): Unit = {
+    (int1, int2) match {
+        case (0, 0) => print("0")
+        case (_ , 0) => print(int1)
+        case (0, _) => print(int2)
     }
 }
 
