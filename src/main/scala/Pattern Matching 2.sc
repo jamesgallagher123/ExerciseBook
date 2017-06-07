@@ -1,4 +1,4 @@
-def swapOrder (container: Any): Unit = {
+def swapOrder(container: Any): Unit = {
     container match {
         case intArray: Array[Int] => println(intArray(1), intArray(0))
         case intList: List[Int]  => println(intList(1), intList(0))
